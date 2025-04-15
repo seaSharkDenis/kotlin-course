@@ -44,9 +44,9 @@ fun main() {
 //Sample Output 1:
 //J. Smith, 30 years old
     println("Information about a person")
-    val nameInput = readln()
-    val secondName = nameInput.split(" ").last()
+    val nameInput = readln().split(" ")
+    val secondName = nameInput[1]
     val ageInput = readln().toInt()
-    println("${nameInput.first()}. $secondName, $ageInput years old")
+    println("${nameInput[0]}. $secondName, $ageInput years old")
 
 }
