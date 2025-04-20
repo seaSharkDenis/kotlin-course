@@ -29,6 +29,75 @@ fun isVowel(vowel: Char): Boolean {
 }
 
 
+//Write a function called isGreater() that takes four integer numbers and returns true if a sum of the first two
+//arguments is greater than a sum of the third and fourth argument. Otherwise, return false.
+//Use the provided code template.
+//Sample Input 1:
+//1
+//2
+//3
+//4
+//Sample Output 1:
+//false
+//Sample Input 2:
+//3
+//4
+//1
+//2
+//Sample Output 2:
+//true
+fun isGreater(numOne: Int, numTwo: Int, numThree: Int, numFour: Int): Boolean {
+    val result = (numOne + numTwo) > (numThree + numFour)
+    return result
+}
+
+//Write a function named divide that takes two long numbers and returns a double value. It should return the result of
+//the division of the first argument by the second one. It's guaranteed that the second argument is not zero.
+//Sample Input 1:
+//500000000000
+//200000000000
+//Sample Output 1:
+//2.5
+fun divide(numOne: Long, numTwo: Long): Double {
+    val result = numOne.toDouble() / numTwo.toDouble()
+    return result
+}
+
+//Categorizing life stages based on age
+//Write a function that takes a person's age as input and prints 'Minor' if their age is less than 18, 'Adult'
+//if their age is greater than or equal to 18 and less than 65, and 'Senior' if their age is 65 or above.
+fun ageCategory(userAge: Int) {
+    val userAgeCategory = if (userAge < 18) {
+        "Minor"
+    } else if (userAge in 18..64) {
+        "Adult"
+    } else {
+        "Senior"
+    }
+    println(userAgeCategory)
+}
+
+//Write a function named isRightEquation() that takes three numbers and returns true if the product of the first two
+//numbers is equal to the third number. Otherwise, it should return false.
+//Use the provided template.
+//Sample Input 1:
+//2
+//3
+//6
+//Sample Output 1:
+//true
+//Sample Input 2:
+//2
+//3
+//7
+//Sample Output 2:
+//false
+fun isRightEquation(length:Int, width:Int, hypotenuse:Int):Boolean{
+    val isRightEq = ((length*width)== hypotenuse)
+    return isRightEq
+}
+
+
 fun main() {
     println("Enter numbers to add: ")
     val addA = 40
@@ -36,7 +105,11 @@ fun main() {
     println("The sum of $addA and $addB is ${sum(addA, addB)}")
     println("The difference between $addA and $addB is ${difference(addA, addB)}")
     println(isVowel('A'))
-
+    println(isGreater(1, 2, 3, 4))
+    println(isGreater(3, 4, 1, 2))
+    println(divide(500000000000, 200000000000))
+    ageCategory(65)
+    println(isRightEquation(2,3,7))
 }
 
 //Single-expression functions
