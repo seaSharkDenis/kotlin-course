@@ -10,7 +10,6 @@ fun main() {
         i -= 2
     } while (i > 1)
 
-
     balanceChecker()
 }
 
