@@ -4,9 +4,10 @@ fun main(){
 //    val input = readln()
 //    val numbers = input.split(",").map{it.trim().toInt()}.toIntArray()
 //    addNumbers(numbers)
-    val myNum: UInt = 23u
-    val anothNum: UInt = 23u
-
+    val charOne = readln().first().lowercase()
+    val charTwo = readln().first().lowercase()
+    val result = checkLatinEquality(charOne, charTwo)
+    print(result)
 }
 
 fun addNumbers(myNumbers: IntArray){
@@ -15,4 +16,19 @@ fun addNumbers(myNumbers: IntArray){
         sum += i
     }
     println("The sum of numbers is $sum")
+}
+//Write a program that reads two Latin letters as characters and compares them ignoring cases. If these characters
+//represent the same letter print true , otherwise false.
+//Sample Input 1:
+//a
+//b
+//Sample Output 1:
+//false
+//Sample Input 2:
+//d
+//D
+//Sample Output 2:
+//true
+fun checkLatinEquality(charOne: String, charTwo: String): Boolean{
+    return charOne.lowercase()==charTwo.lowercase()
 }
